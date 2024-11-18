@@ -16,8 +16,6 @@ import org.apache.commons.lang3.reflect.FieldUtils;
 import org.apache.commons.lang3.reflect.MethodUtils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.junit.rules.TestWatcher;
-import org.junit.runner.Description;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -82,6 +80,7 @@ public class Hook {
 		
 		System.out.println("Cenario: " + scenario.getName());
 		openApplicationAndroid("/app/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
+
 	}
 	
 	
@@ -166,7 +165,7 @@ public class Hook {
 			capabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + apk);
 			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
 			capabilities.setCapability("platformName", Platform.ANDROID);
-			//capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "io.appium.android.apis");
+			capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.swaglabsmobileapp");
 			capabilities.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY, "com.swaglabsmobileapp.MainActivity");
 			capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, true);
 			capabilities.setCapability("automationName", "uiautomator2");

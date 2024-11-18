@@ -246,12 +246,16 @@ Set the following environment variables for proper Appium operation:
 ### Running Tests
 - To execute tests using JUnit:
   ```bash
-  mvn test -Dtest=Runner
+  mvn test -Dtest=Runner OR
+
+   mvn clean test -Dtest=Runner -Dtest".environment=automation"
+
   ```
 - To execute specific feature files or tags:
   ```bash
   mvn test -Dcucumber.options="--tags @tagName"
   ```
+
 
 ## Writing Tests
 ### Creating Feature Files

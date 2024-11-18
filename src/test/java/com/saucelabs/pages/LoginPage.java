@@ -27,6 +27,7 @@ public class LoginPage extends LoginMap {
 
 
 		}
+		waitElement(username, 5);
 
 		username.sendKeys(dataUser);
 		password.sendKeys(dataPass);
